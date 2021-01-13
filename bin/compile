@@ -12,8 +12,8 @@ echo "-----> Installing Oracle Client"
 mkdir -p $CLIENT_BUILD_DIR
 
 cd $CLIENT_BUILD_DIR
-curl -s -S -L https://dashboard.heroku.com/apps/oracle-test-543245/oracle-client/instantclient-basic-linux.x64-19.8.0.0.0dbru.zip > instantclient-basic-linux.x64-19.8.0.0.0dbru.zip
-curl -s -S -L https://dashboard.heroku.com/apps/oracle-test-543245/oracle-client/instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip > instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip
+curl -s -S -L https://pub-zip-43.herokuapp.com/public/instantclient-basic-linux.x64-19.8.0.0.0dbru.zip > instantclient-basic-linux.x64-19.8.0.0.0dbru.zip
+curl -s -S -L https://pub-zip-43.herokuapp.com/public/instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip > instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip
 unzip instantclient-basic-linux.x64-19.8.0.0.0dbru.zip && rm instantclient-basic-linux.x64-19.8.0.0.0dbru.zip
 unzip instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip && rm instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip
 mv instantclient{_19_8,}
