@@ -18,7 +18,7 @@ unzip instantclient-basic-linux.x64-19.8.0.0.0dbru.zip && rm instantclient-basic
 unzip instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip && rm instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip
 mv instantclient{_19_8,}
 cd instantclient
-ln -s libclntsh.so.19.1 libclntsh.so
+#ln -s libclntsh.so.19.1 libclntsh.so
 ln -s libocci.so.19.1 libocci.so
 
 cat <<EOT > $BP_DIR/export
