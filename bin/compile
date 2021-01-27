@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+echo "start buildpacks"
 set -e
 
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
