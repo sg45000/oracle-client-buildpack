@@ -12,14 +12,10 @@ echo "-----> Installing Oracle Client"
 mkdir -p $CLIENT_BUILD_DIR
 
 cd $CLIENT_BUILD_DIR
-curl -s -S -L https://pub-zip-43.herokuapp.com/public/instantclient-basic-linux.x64-19.8.0.0.0dbru.zip > instantclient-basic-linux.x64-19.8.0.0.0dbru.zip
-curl -s -S -L https://pub-zip-43.herokuapp.com/public/instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip > instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip
-unzip instantclient-basic-linux.x64-19.8.0.0.0dbru.zip && rm instantclient-basic-linux.x64-19.8.0.0.0dbru.zip
-unzip instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip && rm instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip
+unzip $BP_DIR/oracle-client/instantclient-basic-linux.x64-19.8.0.0.0dbru.zip
+unzip $BP_DIR/oracle-client/instantclient-sdk-linux.x64-19.8.0.0.0dbru.zip
 mv instantclient{_19_8,}
 cd instantclient
-#ln -s libclntsh.so.19.1 libclntsh.so
-#ln -s libocci.so.19.1 libocci.so
 
 cat <<EOT > $BP_DIR/export
 export LD_LIBRARY_PATH=$CLIENT_BUILD_DIR/instantclient/:$BUILD_DIR/.apt/lib/x86_64-linux-gnu/${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
